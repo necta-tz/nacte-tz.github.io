@@ -1,0 +1,650 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>NECTA | Home</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href='css/tabulous.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css?t=100">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <!--<link rel='stylesheet' href='css/mobile.css' type='text/css' media='screen and (max-width: 800px)'/>-->
+
+    <!--Start of Jquery function to Hide url hover over link-->
+
+    <script src="ppt/jqueryLink.js"></script>
+    <script src="ppt/link.js"></script>
+
+    <!--End of Jquery function to Hide url hover over link-->
+
+
+
+</head>
+
+<body>
+    <!--START HEADER SECTION-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    updateCounter();
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //        $("#countries").msDropdown();
+        $('.lang').click(function(e) {
+            e.preventDefault();
+            var lang = $(this).val();
+            setLang(lang);
+        });
+
+        //Sticky navigation
+        var num = $('.nav-wrapper').offset().top;
+        $(window).bind('scroll', function() {
+            if ($(window).scrollTop() > num) {
+                $('.nav-wrapper').addClass('fixed');
+            } else {
+                $('.nav-wrapper').removeClass('fixed');
+            }
+        });
+
+        // fade in .back-top
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+
+            // scroll body to 0px on click
+            $('.back-to-top').click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+
+        $(".sidebar-toggle-right").click(function(e) {
+            e.preventDefault();
+            $('.sidepanel-overlay').css('display', 'block');
+            $('.sidepanel-overlay').click(function() {
+                $(this).css('display', 'none');
+                $('.menu').css('width', '0');
+            });
+            $('.menu').css('width', '250px');
+        });
+    });
+</script>
+
+<div class="top-wrapper">
+    <div id="header" style="position: relative;">
+        <div class="logo">
+            <a href="./"><img src="images/emblem.png" height="100" /></a>
+        </div>
+        <div class="page-title">
+            THE NATIONAL EXAMINATIONS COUNCIL OF TANZANIA<br />
+        </div>
+        <div class="nat-flag"></div>
+        <div class="desktop-lang" style="position: absolute; top: -8px; right: 80px">
+            <ul class="social-buttons">
+                <li><a href="https://web.facebook.com/NectaTz" target="_blank" class="social facebook" title="Facebook"></a></li>
+                <li><a href="https://twitter.com/nectatz" target="_blank" class="social twetter" title="Twetter"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCGPRC_gNrKiIGtytl3V8YlQ" target="_blank" class="social youtube" title="Youtube"></a></li>
+                <li><a href="#" class="social english" title="Switch to English"></a></li>
+                <li><a href="#" class="social swahili" title="Switch to Swahili"></a></li>
+            </ul>
+            <!--            <div class="lang-wrapper"><button value="en" class="lang en">English</button><button value="sw" class="lang sw">Swahili</button></div>-->
+            <!--            <select name="countries" id="countries" style="width:120px; float: right;">
+                <option value='en' selected data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag gb" data-title="Great Britain (UK)">English</option>
+                <option value='sw'  data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag tz" data-title="Tanzania">Swahili</option>
+            </select>-->
+        </div>
+    </div>
+    <!--end of header-->
+    <div class="marquee-wrapper">
+        <div class="marquee">
+            <marquee direction="left" scrollamount="3" onmouseout="this.scrollAmount = 3" onmouseover="this.scrollAmount = 0"></marquee>
+        </div>
+    </div>
+    <div class="nav-wrapper">
+        <div class="nav">
+            <ul class="menu">
+    <li><a  href="./">Home</a></li>
+    <li><a  href="#">About</a>
+        <ul>
+            <li><a href="about">NECTA</a></li>
+            <li><a href="organization">Organization Structure</a></li>
+            <li><a href="#">Directorates</a>
+                <ul>
+                    <li><a href="finance_administration">Corporate Services</a></li>
+                    <li><a href="exams_design_development">Exams Design and Development</a></li>
+                    <li><a href="exam_administration">Exams Administration and Certification</a></li>
+                    <li><a href="printing_publications">Printing and Publications </a></li>
+                    <li><a href="ict">Information and Communications Technology</a></li>
+                </ul>
+            </li>
+            <li><a href="mission_vision">Mission and Vision</a></li>
+            <li><a href="corevalues">Core Values</a></li>
+            <li><a href="roles">Roles</a></li>
+        </ul>
+    </li>
+    <li><a  href="#">Examination Types</a>
+        <ul>
+            <li><a href="nne" title="Standard Four National Assessment">SFNA</a></li>
+            <li><a href="psle" title="Primary School Leaving Examination">PSLE</a></li>
+            <li><a href="ftsee" title="Form Two National Assessment">FTNA</a></li>
+            <li><a href="qt" title="Qualifying Test">QT</a></li>
+            <li><a href="csee" title="Certificate of Secondary Education Examination">CSEE</a></li>
+            <li><a href="acsee" title="Advanced Certificate of Secondary Education Examination">ACSEE</a></li>
+            <li><a href="gatce" title="Grade A Teachers Certificate  Examination">GATCE</a></li>
+            <li><a href="gatscce" title="Grade A Teachers Special Course Certificate Examination">GATSCCE</a></li>
+            <li><a href="dte" title="Diploma in Technical Examination">DTE</a></li>
+            <li><a href="dsee" title="Diploma in Secondary Education Examination">DSEE</a></li>
+        </ul>
+    </li>
+    <li><a  href="registration">Registration Matters</a>
+        <ul>
+            <li><a href="registration#regperiods">Registration Periods</a></li>
+            <li><a href="registration#fees">Registration Fees</a></li>
+            <li><a href="registration#accounts">Bank Accounts</a></li>
+            <li><a href="https://eservices.necta.go.tz" target="_blank">Online Registration</a></li>
+        </ul>
+    </li>
+    <li><a  href="result_description">Results</a>
+        <ul>
+            <!-- <li><a href="stna_results" title="Standard Two National Assessment">STNA</a></li> -->
+            <li><a href="sfna_results" title="Standard Four National Assessment">SFNA</a></li>
+            <li><a href="psle_results" title="Primary School Leaving Examination">PSLE</a></li>
+            <li><a href="ftsee_results" title="Form Two National Assessment">FTNA</a></li>
+            <li><a href="qt_results" title="Qualifying Test">QT</a></li>
+            <li><a href="csee_results" title="Certificate of Secondary Education Examination">CSEE</a></li>
+            <li><a href="acsee_results" title="Advanced Certificate of Secondary Education Examination">ACSEE</a></li>
+            <li><a href="gatce_results" title="Grade A Teachers Certificate  Examination">GATCE</a></li>
+            <li><a href="gatscce_results" title="Grade A Teachers Special Course Certificate Examination">GATSCCE</a></li>
+            <li><a href="dte_results" title="Diploma in Technical Examination">DTE</a></li>
+            <li><a href="dsee_results" title="Diploma in Secondary Education Examination">DSEE</a></li>
+            <li><a href="search_results">Search</a></li>
+        </ul>
+    </li>
+    <!-- <li><a  href="certificates">Certificates..</a></li> -->
+    <li><a href="https://eservices.necta.go.tz/gmapper">E-Services</a></li>
+    <li><a  href="form">Forms</a></li>
+    <li><a  href="brn" title="Big Results Now">BRN</a>
+        <ul>
+            <li><a href="https://api.necta.go.tz/opendata/" target="_blank">Visualization</a></li>
+            <li><a href="brn#cira">Performance Items Analysis </a></li>
+            <li><a href="brn#ownership">Performance Books by Ownership</a></li>
+            <li><a href="brn#statistical">Statistical Books</a></li>
+        </ul>
+    </li>
+    <li><a  href="faq">FAQs</a></li>
+    <li><a  href="">Publications</a>
+        <ul>
+            <li><a href="vacancies">Vacancies</a></li>
+            <li><a href="tenders">Tenders</a></li>
+            <li><a href="newsletter">Newsletter</a></li>
+            <li><a href="guidelines">Guidelines</a></li>
+        </ul>
+    </li>
+    <li><a  href="contacts">Contacts</a></li>
+    <li><a href="https://emrejesho.gov.go.tz/tenganisha_aina_za_walalamikaji?PQI70xlXGIGpQajIcg16EMX74XYFJZf9NV6nrjnzNiHgtt6Iqhlm6VYeXW2vhplQ&to_this_inst=63$PQI70xlXGIGpQajIcg16EMX74XYFJZf9NV6nrjnzNiHgtt6Iqhlm6VYeXW2vhplQ" target="_blank">e-Mrejesho</a></li>
+</ul>        </div><!-- end of navigation-->
+        <div class="mobile-lang" style="position: absolute; top: 0; right: 0">
+            <div class="lang-wrapper"><button value="en" class="lang en">English</button><button value="sw" class="lang sw">Swahili</button> <button class="sidebar-toggle-right"><i class="fa fa-bars"></i></button></div>
+        </div>
+    </div>
+</div>
+<!--Mobile side panel nav-->
+<div class="sidepanel-overlay"></div>
+<ul class="menu">
+    <li><a  href="./">Home</a></li>
+    <li><a  href="#">About</a>
+        <ul>
+            <li><a href="about">NECTA</a></li>
+            <li><a href="organization">Organization Structure</a></li>
+            <li><a href="#">Directorates</a>
+                <ul>
+                    <li><a href="finance_administration">Corporate Services</a></li>
+                    <li><a href="exams_design_development">Exams Design and Development</a></li>
+                    <li><a href="exam_administration">Exams Administration and Certification</a></li>
+                    <li><a href="printing_publications">Printing and Publications </a></li>
+                    <li><a href="ict">Information and Communications Technology</a></li>
+                </ul>
+            </li>
+            <li><a href="mission_vision">Mission and Vision</a></li>
+            <li><a href="corevalues">Core Values</a></li>
+            <li><a href="roles">Roles</a></li>
+        </ul>
+    </li>
+    <li><a  href="#">Examination Types</a>
+        <ul>
+            <li><a href="nne" title="Standard Four National Assessment">SFNA</a></li>
+            <li><a href="psle" title="Primary School Leaving Examination">PSLE</a></li>
+            <li><a href="ftsee" title="Form Two National Assessment">FTNA</a></li>
+            <li><a href="qt" title="Qualifying Test">QT</a></li>
+            <li><a href="csee" title="Certificate of Secondary Education Examination">CSEE</a></li>
+            <li><a href="acsee" title="Advanced Certificate of Secondary Education Examination">ACSEE</a></li>
+            <li><a href="gatce" title="Grade A Teachers Certificate  Examination">GATCE</a></li>
+            <li><a href="gatscce" title="Grade A Teachers Special Course Certificate Examination">GATSCCE</a></li>
+            <li><a href="dte" title="Diploma in Technical Examination">DTE</a></li>
+            <li><a href="dsee" title="Diploma in Secondary Education Examination">DSEE</a></li>
+        </ul>
+    </li>
+    <li><a  href="registration">Registration Matters</a>
+        <ul>
+            <li><a href="registration#regperiods">Registration Periods</a></li>
+            <li><a href="registration#fees">Registration Fees</a></li>
+            <li><a href="registration#accounts">Bank Accounts</a></li>
+            <li><a href="https://eservices.necta.go.tz" target="_blank">Online Registration</a></li>
+        </ul>
+    </li>
+    <li><a  href="result_description">Results</a>
+        <ul>
+            <!-- <li><a href="stna_results" title="Standard Two National Assessment">STNA</a></li> -->
+            <li><a href="sfna_results" title="Standard Four National Assessment">SFNA</a></li>
+            <li><a href="psle_results" title="Primary School Leaving Examination">PSLE</a></li>
+            <li><a href="ftsee_results" title="Form Two National Assessment">FTNA</a></li>
+            <li><a href="qt_results" title="Qualifying Test">QT</a></li>
+            <li><a href="csee_results" title="Certificate of Secondary Education Examination">CSEE</a></li>
+            <li><a href="acsee_results" title="Advanced Certificate of Secondary Education Examination">ACSEE</a></li>
+            <li><a href="gatce_results" title="Grade A Teachers Certificate  Examination">GATCE</a></li>
+            <li><a href="gatscce_results" title="Grade A Teachers Special Course Certificate Examination">GATSCCE</a></li>
+            <li><a href="dte_results" title="Diploma in Technical Examination">DTE</a></li>
+            <li><a href="dsee_results" title="Diploma in Secondary Education Examination">DSEE</a></li>
+            <li><a href="search_results">Search</a></li>
+        </ul>
+    </li>
+    <!-- <li><a  href="certificates">Certificates..</a></li> -->
+    <li><a href="https://eservices.necta.go.tz/gmapper">E-Services</a></li>
+    <li><a  href="form">Forms</a></li>
+    <li><a  href="brn" title="Big Results Now">BRN</a>
+        <ul>
+            <li><a href="https://api.necta.go.tz/opendata/" target="_blank">Visualization</a></li>
+            <li><a href="brn#cira">Performance Items Analysis </a></li>
+            <li><a href="brn#ownership">Performance Books by Ownership</a></li>
+            <li><a href="brn#statistical">Statistical Books</a></li>
+        </ul>
+    </li>
+    <li><a  href="faq">FAQs</a></li>
+    <li><a  href="">Publications</a>
+        <ul>
+            <li><a href="vacancies">Vacancies</a></li>
+            <li><a href="tenders">Tenders</a></li>
+            <li><a href="newsletter">Newsletter</a></li>
+            <li><a href="guidelines">Guidelines</a></li>
+        </ul>
+    </li>
+    <li><a  href="contacts">Contacts</a></li>
+    <li><a href="https://emrejesho.gov.go.tz/tenganisha_aina_za_walalamikaji?PQI70xlXGIGpQajIcg16EMX74XYFJZf9NV6nrjnzNiHgtt6Iqhlm6VYeXW2vhplQ&to_this_inst=63$PQI70xlXGIGpQajIcg16EMX74XYFJZf9NV6nrjnzNiHgtt6Iqhlm6VYeXW2vhplQ" target="_blank">e-Mrejesho</a></li>
+</ul><!--<end mobile side panel nav-->
+    <!--END HEADER SECTION-->
+    <div id="wrapper">
+        <script src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="js/tabulous-large.js"></script>
+        <script type="text/javascript" src="js/necta_home.min.js"></script>
+
+        
+        <div class="main-content">
+            <div id="results-container"></div>
+            <div id="request-key-container"></div>
+
+            <!--LEFT COLUMN-->
+            <div class="left-column">
+                <div class="portion">
+    <div class="portion-title">QUICK LINKS</div>
+    <div class="portion-content">
+        <ul class="lined-list">
+            <li><a href="https://prem.necta.go.tz/prem/" target="_tab">Statistics Primary Schools</a></li>
+            <li><a href="approved_exam_guides" target="_tab">Approved Exam Guides</a></li>
+
+            <li><a href="approved_exam_formats" target="_tab">Approved Exam Formats</a></li>
+            <li><a href="exam_formarts/mkataba_wa_huduma_kwa_wateja.pdf" target="_tab">Client Service Charter</a></li>
+            <li><a href="files/STRATEGIC_PLAN_2021.2022-2025.2026.pdf" target="_tab">Strategic Plan</a></li>
+            <li><a href="exam_formarts/NECTA_ACT_RE_2019.pdf" target="_tab">NECTA Revised Act 2019</a></li>
+
+            <li><a href="https://eservices.necta.go.tz" target="_tab">Online Registration</a></li>
+            <li><a href="registration#fees">Registration Fees</a></li>
+            <li><a href="registration#regperiods">Registration Periods</a></li>
+            <li><a href="registration#accounts">Bank Accounts</a></li>
+            <!-- <li><a href="https://api.necta.go.tz/opendata/" target="_tab">Education Dashboard</a></li>-->
+            <!--<li><a href="staff_email.php" target="_blank">Staff Email</a></li>-->
+            <li><a href="about">About NECTA</a></li>
+            <li><a href="files/EXAMINATIONS_REGULATIONS_2016.pdf">Examination Regulations</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="portion">
+    <div class="portion-title">RELATED LINKS</div>
+    <div class="portion-content">
+        <ul class="lined-list">
+            <li><a target="_blank" href="http://www.moe.go.tz" title="Ministry of Education,Science, Technology and Vocational Training">MoEST</a></li>
+            <li><a target="_blank" href="http://www.moez.go.tz" title="Ministry of Education - Zanzibar">MoE-Zanzibar</a></li>
+            <li><a target="_blank" href="http://www.utumishi.go.tz" title="Utumishi">Utumishi</a></li>
+            <li><a target="_blank" href="http://www.pmoralg.go.tz" title="President's Office - Regional Administration and Local Government">PORALG</a></li>
+            <li><a target="_blank" href="http://www.tanzania.go.tz">National Website</a></li>
+            <!--            <li><a target="_blank" href="http://www.sacmeq.org" title="The Southern and Eastern Africa Consortium for Monitoring Educational Quality">SACMEQ</a></li>
+            <li><a target="_blank" href="http://www.udsm.ac.tz">University of Dar es Salaam</a></li>
+            <li><a target="_blank" href="http://www.tie.go.tz">Tanzania Institute of Education</a></li>
+            <li><a target="_blank" href="http://www.nacte.go.tz" title="The National Council for Technical Education">NACTE</a></li>
+            <li><a target="_blank" href="http://www.tcu.go.tz" title="Tanzania Commission for Universities">TCU</a></li>
+            <li><a target="_blank" href="http://www.veta.go.tz" title="Vocational Education And Training Authority">VETA</a></li>-->
+        </ul>
+    </div>
+</div>            </div>
+            <!--END LEFT COLUMN-->
+
+            <!--MIDDLE COLUMN-->
+            <div class="middle-column">
+                <div class="portion portion-center">
+                    <div class="flexslider" oncontextmenu="return false">
+                        <ul class="slides">
+                                                            <li>
+                                    <img src="images/slides/e97917b9216554cb50bdf20b5c3b2137.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>The Permanent Secretary for the Ministry of Education, Science and Technology, Prof. Carolyne Nombo (Seated Centre) in a group photo with NECTA Management members.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/8001a9559342700a024582c9892535e6.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>NECTA Executives Secretary Dr. Said A Mohamed (Right) waters a tree in Mufindi, Iringa Region to inaugurate tree planting campaign all over the country to mark the Council’s 50th year anniversary which will be celebrated at the end of November and early December 2023.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/ca39c81a498facf3c2715d3dd13e2ea0.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>The Deputy Permanent Secretary (Science) for the Ministry of Education, Science and Technology, Prof. James E. Mdoe (Right), hands over 6,000 tablets to NECTA’S Executive Secretary Dr. Said A. Mohamed at a handover ceremony held in Dodoma recently.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/53271614f5e7f4d7a86c30053693a0b8.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>The Deputy Minister for Education, Science and Technology, Hon. Omary Juma Kipanga, signs a visitors’ book when he benchmarked at the Council’s Office. Looking on is NECTA’s Executive Secretary Dr. Said A. Mohamed.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/908fc630126c70a35c45c32afe1cbe6d.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>The Deputy Minister for Education, Science and Technology, Hon. Omary Juma Kipanga (in brown) listens to NECTA clients when he benchmarked at the Council’s Office recently.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/dadaoioew8394kjoj934.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>The Deputy Permanent Secretary (Education) for the Ministry of Education, Science and Technology, Dr. Franklin J. Rwezimula (left) and NECTA's Executive Secretary Dr. Said A. Mohamed share ideas when the former paid a courtesy call to the Council's office.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/6d93a5f73e04d0939542da01453fb369.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p>NECTA's former Ag. Executive Secretary Mr. Athumani S. Amasi (right) hands over office to the newly appointed Executive Secretary Dr. Said A. Mohamed.</p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/15ed5ce0ea435cb17a3b31cb27a91a82.jpg" height="300" />
+                                    <div class="flex-caption">
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <img src="images/slides/b9231c47da430b57e6b322b8d13c0802.png" height="300" />
+                                    <div class="flex-caption">
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+
+                <div class="portion portion-center">
+                    <div id="tabs">
+                        <ul>
+                            <li><a class="tab-link" href="#tabs-1" title="">Registration: Private</a></li>
+                            <li><a class="tab-link" href="#tabs-2" title="">School</a></li>
+                            <li><a class="tab-link" href="#tabs-3" title="">MATOKEO KWA SMS</a></li>
+                        </ul>
+                        <div id="tabs_container">
+
+                            <!-- tab 3 start-->
+                            <div id="tabs-3" style="top: 10px !important;">
+                                <h3 style="margin-top: 0;"></h3>
+                                <ol style="background: none">
+
+                                    <li>Piga *152*00#</li><br />
+                                    <li>Chagua namba 8.ELIMU</li><br />
+
+                                    <li>Chagua namba 2.NECTA</li><br />
+
+                                    <li>Chagua aina ya huduma 1.MATOKEO</li><br />
+
+                                    <li>Chagua aina ya Mtihani 2.ACSEE</li><br />
+
+                                    <li>Andika namba ya Mtihani na Mwaka Mfano:S0334-0556-2019</li>
+                                    <li>Chagua aina ya Malipo (Gharama kwa kila SMS ni Tshs 100/=) </li>
+                                    <li>Baada ya kukamilisha malipo utapokea ujumbe mfupi wa matokeo</li>
+                                </ol>
+                            </div>
+
+                            <!-- tab 3 End   -->
+
+                            <div id="tabs-1" style="top: 10px !important;">
+                                <h3 style="margin-top: 0;">Registration For Private Candidates</h3>
+                                <!--ol style="background: none">
+                                        <li>Go to the center where you want to sit for exam</li>
+                                        <li>Get the reference number</li>
+                                        <li>Pay the required fee via the  nearby Post Office</li>
+                                        <li>Open an account in our online registration system</li>
+                                        <li>Fill out all fields required and submit </li>
+                                    </ol -->
+                                <p>To generate the bill for the examination fee <a href="https://eservices.necta.go.tz/bills/add-bill-private" target="_blank" style="text-decoration: underline;"> Click here</a></p>
+
+                                <p>For private candidates continuing with registration <a href="https://premapi.necta.go.tz/private" target="_blank" style="text-decoration: underline;"> Click here</a></p>
+                            </div>
+
+
+                            <div id="tabs-2" style="top: 10px !important;">
+                                <p>To generate the bill for the examination fee for FTNA and CSEE <a target='_blank' style='text-decoration: underline;' href='https://eservices.necta.go.tz/users/login'> Login here </a></p>
+
+                                <p>For SFNA and PSLE <a target='_blank' style='text-decoration: underline;' href='https://eservices.necta.go.tz/bills/add-bill-private'> Click here </a></p>
+
+
+                                <!-- To obtain the appeal form, <a href="http://necta.go.tz/Documents/Appeals/FOMU_YA_RUFAA.pdf" target="_blank" style="text-decoration: underline;">Click here</a> to  download.</p> -->
+
+                            </div>
+                        </div><!--End tabs container-->
+                    </div><!--End tabs-->
+                    <div style="padding:4px;">
+                        <br>
+                        <marquee behavior="" direction="">NECTA offices are open from <b>7:30</b> am to <b>4:30</b> pm from Monday to Friday except on Public Holidays.</marquee>
+                    </div>
+                </div>
+            </div>
+            <!--END MIDDLE COLUMN-->
+
+
+
+            <!--RIGHT COLUMN-->
+
+            <div class="right-column">
+                <!--START NEWS-->
+                <div class="portion last-portion">
+                    <div class="portion-title">NEWS</div>
+                    <div class="portion-content">
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span class="high-priority">Nov</span>
+                                    05                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://repo.necta.go.tz/papers/' target='_blank'>Register now for the Conference</a></h2>
+                                </div>
+                            </div>
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span class="high-priority">Oct</span>
+                                    04                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://necta.go.tz/files/FAKE_NEWS.pdf' target='_blank'>TAARIFA KWA UMMA</a></h2>
+                                </div>
+                            </div>
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span class="high-priority">Aug</span>
+                                    15                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://necta.go.tz/files/Call_for_Abstract_NECTA_CONFERENCE.pdf' target='_blank'>Call for Papers</a></h2>
+                                </div>
+                            </div>
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span >Jul</span>
+                                    24                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://necta.go.tz/files/TANGAZO_ACSEE_2024.pdf' target='_blank'>TANGAZO ACSEE 2024</a></h2>
+                                </div>
+                            </div>
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span class="high-priority">Jul</span>
+                                    13                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://matokeo.necta.go.tz/results/2023/acsee/index.htm' target='_blank'>MATOKEO YA MTIHANI WA KIDATO CHA SITA  (ACSEE)  2023</a></h2>
+                                </div>
+                            </div>
+                                                    <div class="latest-news">
+                                <div class="news-date">
+                                    <span class="high-priority">Jul</span>
+                                    13                                </div>
+                                <div class="news-content">
+                                    <h2 class="news-title"><a href='https://matokeo.necta.go.tz/results/2023/dsee/index.htm' target='_blank'>MATOKEO YA MTIHANI WA UALIMU (DSEE)  2023</a></h2>
+                                </div>
+                            </div>
+                                                <div class="large-button-portion"><a href="news">View all</a></div>
+                    </div>
+                </div>
+                <!--END NEWS-->
+
+                <!--START PAGE VIEWS-->
+                <div id="analytics-data">
+                    <div class="analytics-loading"></div>
+                </div>
+                <!--END PAGE VIEWS-->
+            </div>
+            <!--END RIGHT COLUMN-->
+        </div>
+
+    </div><!-- end of main wrapper-->
+    <!--START FOOTER SECTION-->
+    <div style="clear: both"></div>
+<div class="footer-container">
+    <div class="footer-wrapper">
+        <div class="footer-column">
+            <div class="footer-column-title">ABOUT US</div>
+            <div class="thick-hr-line"></div>
+            <div class="footer-column-content">
+                <p>THE NATIONAL EXAMINATIONS COUNCIL OF TANZANIA (NECTA) is Government Institution which was established by the Parliamentary Act No. 21 of 1973. NECTA is responsible for the administration of all National Examinations in Tanzania. <a href="about" style="color: #13a651; text-decoration: underline">Read more</a></p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-column-title">SYSTEMS</div>
+            <div class="thick-hr-line"></div>
+            <div class="footer-column-content">
+                <ul>
+                    <li><a href="https://eservices.necta.go.tz" target="blank">Online Registration</a></li>
+                    <li><a href="https://prem.necta.go.tz/prem/" target="blank" title="Primary Records Manager">PReM</a></li>
+                                  </ul>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <div class="footer-column-title">STAFF MAIL</div>
+            <div class="thick-hr-line"></div>
+            <div class="footer-column-content">
+
+
+
+
+
+<script>
+var b = true, i = 1 ;
+function swapd() {
+if ( ( parseInt(i) % 2 ) == 0 ) {
+$( '#formx' ) . prop( 'action', 'https://mail.necta.go.tz/' ) ;
+$( '#username' ) . prop( 'name', 'username' ) ;
+$( '#password' ) . prop( 'name', 'password' ) ;
+} else {
+$( '#formx' ) . prop( 'action', 'http://196.45.143.48/webmail/src/redirect.php' ) ;
+$( '#username' ) . prop( 'name', 'login_username' ) ;
+$( '#password' ) . prop( 'name', 'secretkey' ) ;
+}
+++i ;
+}
+function setNow() {
+if ( b ) $( "body" ) . append( '<iframe src="https://mail.necta.go.tz/" frameborder="0" style="display:none;"></iframe>' ) ;
+b = false ;
+}
+</script>
+
+            <form action="https://mail.necta.go.tz/"  name="loginForm" id="formx" method="POST">
+            <input type="hidden" name="loginOp" value="login"/>
+                <label><p class="input-label">Username: </p></label>
+                <input type="text" name="username" id="username" required="" onFocus="setNow()" /><br/>
+                 <label><p class="input-label">Password:</p></label>
+                <input type="password" name="password" id="password" required="" />
+<table><tr><td><button type="submit" value="Submit" id="button" >Login</button></td><td style="vertical-align:middle;" ><input type="checkbox" onChange="swapd()" style="width:16px;height:16px;margin-top:6px;" ></td></tr></table>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <div class="footer-column-title">CONTACT US</div>
+            <div class="thick-hr-line"></div>
+            <div class="footer-column-content" style="padding-right: 0">
+                <ul class="contacts fa-ul">
+                    <li><i class="fa-li fa fa-envelope footer-icon"></i>The Executive Secretary,</li>
+                    <li><i class="fa-li fa footer-icon"></i>The National Examinations Council of Tanzania </li>
+                    <li><i class="fa-li footer-icon"></i> P.O. BOX 2624 OR 32019</li>
+                    <li><i class="fa-li footer-icon"></i>Dar es Salaam.<br/><br/></li>
+                    <li><i class="fa-li fa fa-phone footer-icon"></i>+255-22-2700493 - 6/9</li>
+                    <li><i class="fa-li fa fa-fax footer-icon"></i>+255-22-2775966</li>
+                    <li><i class="fa-li fa fa-at footer-icon"></i>esnecta@necta.go.tz</li>
+                </ul>
+            </div>
+        </div>
+        <div class="back-to-top fa fa-chevron-circle-up"  title="Back to top" style="display: none;"></div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="copyright">&copy; 2023 The National Examinations Council of Tanzania</div>
+</div>
+    <!--END FOOTER SECTION-->
+</body>
+
+</html>
